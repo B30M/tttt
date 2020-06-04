@@ -2,6 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
+
+<script type="text/javascript">
+		var docV = document.documentElement;
+		// 전체화면 설정
+		function openFullScreenMode() {
+			if (docV.requestFullscreen)
+				docV.requestFullscreen();
+			else if (docV.webkitRequestFullscreen) // Chrome, Safari (webkit)
+				docV.webkitRequestFullscreen();
+			else if (docV.mozRequestFullScreen) // Firefox
+				docV.mozRequestFullScreen();
+			else if (docV.msRequestFullscreen) // IE or Edge
+				docV.msRequestFullscreen();
+		}
+ 
+		$(document).ready(function(){
+			openFullScreenMode();
+		});
+	</script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <title>DDD 홍보지</title>
      <style media="screen">
